@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.33)
+cmake_minimum_required(VERSION 3.30)
 
 set(PROJECT_NAME FightClubGame)
 project(${PROJECT_NAME} VERSION 1.0.0)
