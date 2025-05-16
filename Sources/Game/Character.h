@@ -1,11 +1,11 @@
 #pragma once
 
 #ifdef EXPORT
-#define GAME_API __declspec(dllexport)
+	#define GAME_API __declspec(dllexport)
 #elif IMPORT 
-#define GAME_API __declspec(dllimport)
+		#define GAME_API __declspec(dllimport)
 #else 
-#define GAME_API
+	#define GAME_API
 #endif // EXPORT
 
 class Weapon;
