@@ -1,12 +1,19 @@
 #pragma once
 
-#ifdef EXPORT
-	#define GAME_API __declspec(dllexport)
-#elif IMPORT 
-		#define GAME_API __declspec(dllimport)
-#else 
-	#define GAME_API
-#endif // EXPORT
+#ifdef defined(WIN32) || defined(_WINDOWS)
+
+	#ifdef EXPORT
+		#define GAME_API __declspec(dllexport)
+	#elif IMPORT 
+			#define GAME_API __declspec(dllimport)
+	#else 
+		#define GAME_API
+	#endif // EXPORT
+#else
+	#define GAME_API __attribute__((visibility("default")))
+
+#endif
+
 
 class Weapon;
 
